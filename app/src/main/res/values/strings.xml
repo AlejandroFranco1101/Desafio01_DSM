@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Desafio01_DSM</string>
+    <string name="app_name">Mi Perfil</string>
+    <string name="welcome_title">Mi Perfil</string>
+    <string name="welcome_message">Bienvenido. Completa tu informacion personal y revisa el resumen de tu perfil guardado.</string>
+    <string name="start_button">Iniciar</string>
+    <string name="profile_screen_pending">La pantalla de registro se agregara en el siguiente paso.</string>
 </resources>
