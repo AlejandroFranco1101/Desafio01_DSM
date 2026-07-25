@@ -1,6 +1,7 @@
 package com.example.desafio01_dsm
 
 import android.Manifest
+import android.app.DatePickerDialog
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
@@ -72,6 +73,12 @@ class RegistroPerfilActivity : AppCompatActivity() {
         phoneEditText = findViewById(R.id.etPhone)
         birthDateEditText = findViewById(R.id.etBirthDate)
         addressEditText = findViewById(R.id.etAddress)
+        birthDateEditText.setOnClickListener {
+            showBirthDatePicker()
+        }
+        birthDateLayout.setEndIconOnClickListener {
+            showBirthDatePicker()
+        }
     }
 
     private fun requestCameraPermission() {
@@ -164,6 +171,32 @@ class RegistroPerfilActivity : AppCompatActivity() {
         phoneLayout.error = null
         birthDateLayout.error = null
         addressLayout.error = null
+    }
+
+    private fun showBirthDatePicker() {
+        val calendar = Calendar.getInstance()
+        val currentValue = birthDateEditText.text.toString().trim()
+        val match = Regex("""^(\d{2})/(\d{2})/(\d{4})$""").matchEntire(currentValue)
+
+        if (match != null) {
+            calendar.set(
+                match.groupValues[3].toInt(),
+                match.groupValues[2].toInt() - 1,
+                match.groupValues[1].toInt()
+            )
+        }
+
+        DatePickerDialog(
+            this,
+            { _, year, month, dayOfMonth ->
+                val selectedDate = "%02d/%02d/%04d".format(dayOfMonth, month + 1, year)
+                birthDateEditText.setText(selectedDate)
+                birthDateLayout.error = null
+            },
+            calendar.get(Calendar.YEAR),
+            calendar.get(Calendar.MONTH),
+            calendar.get(Calendar.DAY_OF_MONTH)
+        ).show()
     }
 
     private fun isValidBirthDate(value: String): Boolean {
