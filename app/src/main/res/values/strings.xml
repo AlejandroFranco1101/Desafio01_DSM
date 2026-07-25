@@ -16,5 +16,9 @@
     <string name="camera_status_default">Aun no se ha solicitado permiso para la camara.</string>
     <string name="camera_permission_granted">El usuario concedio el permiso para la camara.</string>
     <string name="camera_permission_denied">No se puede acceder a la camara porque el permiso fue denegado.</string>
-    <string name="profile_validation_pending">La validacion y envio de datos se agregaran en la siguiente parte.</string>
+    <string name="required_field_error">Este campo es obligatorio.</string>
+    <string name="email_format_error">Ingresa un correo electronico valido.</string>
+    <string name="phone_format_error">Ingresa un telefono valido de 8 a 15 digitos.</string>
+    <string name="date_format_error">Ingresa una fecha valida con formato dd/mm/aaaa.</string>
+    <string name="profile_valid_message">Datos validados correctamente. En la siguiente parte se enviaran al resumen.</string>
 </resources>
