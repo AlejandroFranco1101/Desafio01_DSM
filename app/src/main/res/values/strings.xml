@@ -14,6 +14,7 @@
     <string name="take_photo_button">Tomar Foto</string>
     <string name="save_button">Guardar</string>
     <string name="camera_status_default">Aun no se ha solicitado permiso para la camara.</string>
-    <string name="camera_permission_pending">El permiso de camara se agregara en la siguiente parte.</string>
+    <string name="camera_permission_granted">El usuario concedio el permiso para la camara.</string>
+    <string name="camera_permission_denied">No se puede acceder a la camara porque el permiso fue denegado.</string>
     <string name="profile_validation_pending">La validacion y envio de datos se agregaran en la siguiente parte.</string>
 </resources>
