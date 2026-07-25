@@ -20,5 +20,13 @@
     <string name="email_format_error">Ingresa un correo electronico valido.</string>
     <string name="phone_format_error">Ingresa un telefono valido de 8 a 15 digitos.</string>
     <string name="date_format_error">Ingresa una fecha valida con formato dd/mm/aaaa.</string>
-    <string name="profile_valid_message">Datos validados correctamente. En la siguiente parte se enviaran al resumen.</string>
+    <string name="profile_saved_title">Perfil Guardado</string>
+    <string name="profile_saved_message">Resumen de la informacion personal ingresada.</string>
+    <string name="summary_full_name_label">Nombres y apellidos</string>
+    <string name="summary_email_label">Correo electronico</string>
+    <string name="summary_phone_label">Numero de telefono</string>
+    <string name="summary_birth_date_label">Fecha de nacimiento</string>
+    <string name="summary_address_label">Direccion de residencia</string>
+    <string name="back_home_button">Regresar al inicio</string>
+    <string name="new_profile_button">Nuevo perfil</string>
 </resources>

@@ -1,6 +1,7 @@
 package com.example.desafio01_dsm
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Patterns
@@ -54,7 +55,7 @@ class RegistroPerfilActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.btnSaveProfile).setOnClickListener {
             if (validateProfileForm()) {
-                Toast.makeText(this, R.string.profile_valid_message, Toast.LENGTH_SHORT).show()
+                openSavedProfile()
             }
         }
     }
@@ -144,6 +145,18 @@ class RegistroPerfilActivity : AppCompatActivity() {
         return isValid
     }
 
+    private fun openSavedProfile() {
+        val intent = Intent(this, PerfilGuardadoActivity::class.java).apply {
+            putExtra(EXTRA_FULL_NAME, fullNameEditText.text.toString().trim())
+            putExtra(EXTRA_EMAIL, emailEditText.text.toString().trim())
+            putExtra(EXTRA_PHONE, phoneEditText.text.toString().trim())
+            putExtra(EXTRA_BIRTH_DATE, birthDateEditText.text.toString().trim())
+            putExtra(EXTRA_ADDRESS, addressEditText.text.toString().trim())
+        }
+
+        startActivity(intent)
+    }
+
     private fun clearErrors() {
         fullNameLayout.error = null
         emailLayout.error = null
@@ -173,5 +186,13 @@ class RegistroPerfilActivity : AppCompatActivity() {
 
     private fun isLeapYear(year: Int): Boolean {
         return year % 400 == 0 || year % 4 == 0 && year % 100 != 0
+    }
+
+    companion object {
+        const val EXTRA_FULL_NAME = "com.example.desafio01_dsm.EXTRA_FULL_NAME"
+        const val EXTRA_EMAIL = "com.example.desafio01_dsm.EXTRA_EMAIL"
+        const val EXTRA_PHONE = "com.example.desafio01_dsm.EXTRA_PHONE"
+        const val EXTRA_BIRTH_DATE = "com.example.desafio01_dsm.EXTRA_BIRTH_DATE"
+        const val EXTRA_ADDRESS = "com.example.desafio01_dsm.EXTRA_ADDRESS"
     }
 }
