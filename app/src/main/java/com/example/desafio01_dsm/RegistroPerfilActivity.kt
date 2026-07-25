@@ -16,6 +16,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
+import java.util.Calendar
 
 class RegistroPerfilActivity : AppCompatActivity() {
     private lateinit var cameraStatusText: TextView
@@ -171,7 +172,9 @@ class RegistroPerfilActivity : AppCompatActivity() {
         val month = match.groupValues[2].toInt()
         val year = match.groupValues[3].toInt()
 
-        if (year !in 1900..2026 || month !in 1..12) {
+        val currentYear = Calendar.getInstance().get(Calendar.YEAR)
+
+        if (year !in 1900..currentYear || month !in 1..12) {
             return false
         }
 
