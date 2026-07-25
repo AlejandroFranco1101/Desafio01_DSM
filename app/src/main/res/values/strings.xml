@@ -3,5 +3,17 @@
     <string name="welcome_title">Mi Perfil</string>
     <string name="welcome_message">Bienvenido. Completa tu informacion personal y revisa el resumen de tu perfil guardado.</string>
     <string name="start_button">Iniciar</string>
-    <string name="profile_screen_pending">La pantalla de registro se agregara en el siguiente paso.</string>
+    <string name="register_title">Registro de Perfil</string>
+    <string name="register_message">Ingresa tus datos personales para crear tu perfil.</string>
+    <string name="full_name_hint">Nombres y apellidos</string>
+    <string name="email_hint">Correo electronico</string>
+    <string name="phone_hint">Numero de telefono</string>
+    <string name="birth_date_hint">Fecha de nacimiento</string>
+    <string name="birth_date_helper">Formato: dd/mm/aaaa</string>
+    <string name="address_hint">Direccion de residencia</string>
+    <string name="take_photo_button">Tomar Foto</string>
+    <string name="save_button">Guardar</string>
+    <string name="camera_status_default">Aun no se ha solicitado permiso para la camara.</string>
+    <string name="camera_permission_pending">El permiso de camara se agregara en la siguiente parte.</string>
+    <string name="profile_validation_pending">La validacion y envio de datos se agregaran en la siguiente parte.</string>
 </resources>
